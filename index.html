@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Text Editor using Stacks</title>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css"
+        integrity="sha384-Gn5384xqQ1aoWXA+058RXPxPg6fy4IWvTNh0E263XmFcJlSAwiGgFAW/dAiS6JXm" crossorigin="anonymous">
+
+    <link rel="stylesheet" href="style.css">
+    <script src="stack.js"></script>
+    <script src="script.js" type="module"></script>
+    <style>
+        div {
+            display: flex;
+            text-align: center;
+            justify-content: space-around;
+        }
+    </style>
+</head>
+
+<body>
+    <nav class="navbar" >
+        <h4 style="font-family: fantasy;">  Text Editor </h4>
+    </nav>
+
+    <div id="container">
+            
+        <div class="text_box" style="padding: 50px;">
+            Type in the box below
+            <br>
+            <br>
+            <textarea class="form-control" id="comment" style="height: 90%; background-color: #ffffff;">
+            </textarea>
+        </div>
+
+        <div id="space"></div>
+
+        <div class="text_box1" id="hide1" style="padding :60px; " >
+            <span id="temptext1" style="width: 100%; text-align:start; font-size:small ">
+                <p id="seq">Sequence of stack 0</p>
+            </span>
+        </div>
+
+        <div id="space"></div>
+
+        <div class="text_box2" id="hide2" style="padding :60px; " >
+            <span id="temptext2" style="width: 100%; text-align:start; font-size:small ">
+                <p id="seq">Sequence of stack 1</p>
+            </span>
+        </div>
+
+        
+
+    </div>
+
+    <br>
+    <br>
+
+    <div id="remain" >
+
+        <br>
+        <button type="button" class="btn btn-success" id="increase">&nbsp;&nbsp;&nbsp;Inrease Font Size&nbsp;&nbsp;&nbsp;</button>
+        <br>
+        <button type="button" class="btn btn-success" id="decrease">&nbsp;&nbsp;&nbsp;Decrease Font Size&nbsp;&nbsp;&nbsp;</button>
+        <br>
+        <button type="button" class="btn btn-success" id="color">&nbsp;&nbsp;&nbsp;Change Color&nbsp;&nbsp;&nbsp;</button>
+        <br>
+        <button type="button" class="btn btn-success" id="undo">&nbsp;&nbsp;&nbsp;Undo&nbsp;&nbsp;&nbsp;</button>
+        <br>
+        <button type="button" id="hideStack" class="btn btn-warning" onclick="hideStack()" >&nbsp;&nbsp;&nbsp;Stack&nbsp;&nbsp;&nbsp;</button>
+        <br>
+        <button type="button" class="btn btn-danger" id="clear">Clear Box</button>
+    </div>
+
+    <script>
+        function hideStack () {
+            var x = document.getElementById("hide1");
+            var y = document.getElementById("hide2");
+            if (x.style.display === "none") {
+                x.style.display = "block";
+            } else {
+                x.style.display = "none";
+            }
+            if (y.style.display === "none") {
+                y.style.display = "block";  
+            } else {
+                y.style.display = "none";
+            }
+        }
+    </script>
+</body>
+
+</html>
+
+
+<!-- <body>
+    <div class="relative">
+        <h1>Align Buttons Horizontally Example</h1>
+        <p>Here’s some content in the paragraph and the buttons
+            <button class="navitem">Item 1</button>
+            <button class="navitem">Item 2</button>
+            <button class="navitem">Item 3</button>
+        </p>
+    </div>
+</body> -->
